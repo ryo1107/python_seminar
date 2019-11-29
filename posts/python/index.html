@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>B3 Python Seminar</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-11-29T17:11:45 JST">
+<title>Python入門(Colab) :: B3 Python Seminar</title>
+<link rel="shortcut icon" href="/python_seminar/images/favicon.png" type="image/x-icon" />
+<link href="/python_seminar/css/font-awesome.min.css" rel="stylesheet">
+<link href="/python_seminar/css/nucleus.css" rel="stylesheet">
+<link href="/python_seminar/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/python_seminar/css/bootstrap.min.css">
+<script src="/python_seminar/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/ryo1107.github.io\/python_seminar";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/python_seminar/posts/python/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://ryo1107.github.io/python_seminar">B3 Python Seminar</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/python_seminar/" class="dd-item">
+          <a href="/python_seminar/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://ryo1107.github.io/python_seminar/posts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/python_seminar/posts/">Posts</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://ryo1107.github.io/python_seminar/posts/python/" class="dd-item active">
+        <div>
+          <a href="/python_seminar/posts/python/">
+            Python入門(Colab)
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/python_seminar/posts/" >
+   Posts</option> 
+      <option value="/python_seminar/posts/python/"  selected>- Python入門(Colab)</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/python_seminar/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/python_seminar/js/auto-complete.js"></script>
+        <link href="/python_seminar/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/ryo1107.github.io\/python_seminar";
+          
+        </script>
+        <script type="text/javascript" src="/python_seminar/js/search.js"></script>
+      </div>
+    
+
+    <h1>Python入門(Colab)</h1>
+    
+    
+    
+    
+
+<h1 id="google-colabの初期設定">google colabの初期設定</h1>
+
+<p>Googleアカウントを持っている場合はGoogleDriveと連携しているGoogleColaboratoryを使うことで簡単に環境構築ができます。</p>
+
+<ol>
+<li>GoogleDriveにアクセスします。</li>
+<li>環境を作りたいフォルダで右クリックをし、アプリを追加をクリックします。</li>
+</ol>
+
+<p><img src="https://hacknote.jp/wp-content/uploads/2019/10/e851fe82fc47dd7ac63ec175cd3395eb.png" alt="img" /><br>
+(すでに追加済みのアカウントのためアプリの一覧に存在していますが、初期状態ではありません)</p>
+
+<ol>
+<li>colabと検索し、追加します。</li>
+</ol>
+
+<p><img src="https://hacknote.jp/wp-content/uploads/2019/10/abc1c2f09608f7fa827d030cefdda677.png" alt="img2" /><img src="https://hacknote.jp/wp-content/uploads/2019/10/024defaabca1f37635239985aea1965d.png" alt="img3" /></p>
+
+<ol>
+<li>GoogleDriveのフォルダに戻ってきて、右クリックのメニューからGoogle Colaboratoryをクリックします。</li>
+</ol>
+
+<p>以上でGoogleの提供しているpythonの実行環境が表示されます。<br></p>
+
+<p>jupyterという形式になっており、GoogleDriveの容量の限り使えます。</p>
+
+<h1 id="colabへのデータのアップロードの方法">Colabへのデータのアップロードの方法</h1>
+
+<p>コピー&amp;ペーストでGoogle Driveのフォルダ内にドラッグ&amp;ドロップします。</p>
+
+<p><img src="/img/csv_up.png" alt="csv_up" /></p>
+
+<p>Colab内でGoogleDriveをマウントします。</p>
+
+<p><img src="/img/mount1.png" alt="mount1" />
+ファイルをクリックして、接続後</p>
+
+<p><img src="/img/mount2.png" alt="mount2" />
+ドライブをマウントをクリック</p>
+
+<p><img src="/img/mount3.png" alt="mount3" />
+再生ボタンをクリック後出てくるURLをクリックし、Googleの認証をします。
+そして、出てくるコードをColabの空欄に入力します。</p>
+
+<p><img src="/img/mount4.png" alt="mount4" />
+するとこのようにGoogleDriveをColabから利用できるようになります。</p>
+
+<p><img src="/img/mount5.png" alt="mount5" />
+ファイルを使用する際はこのように、ファイルを右クリック後、パスをコピーします。</p>
+
+<h1 id="最終目標">最終目標</h1>
+
+<p>データの読み込みをして<br>
+解析をして<br>
+結果を保存する</p>
+
+<h2 id="print文">print文</h2>
+
+<pre><code class="language-python">print(&quot;Hello World&quot;)       #文字列の標準出力
+
+print(123)                 #数値の標準出力
+
+print(&quot;Hello&quot;+&quot; &quot;+&quot;World&quot;) #文字列の結合後に標準出力
+
+num=123
+print(str(num)+&quot;test&quot;)     #数値を文字列に変換後、文字列の結合をし標準出力
+
+text=&quot;Hello2&quot;
+print(text)                #変数内の文字列の標準出力
+
+print([1,2,3,4,5])         #リストの標準出力
+</code></pre>
+
+<h2 id="データの読み込み">データの読み込み</h2>
+
+<p><code>numpy</code>というライブラリに入っている<code>loadtxt</code>という関数を使用してnumpy配列の形式でデータを読み込みます。</p>
+
+<h5 id="データは-これ-link-test-data-csv-を使ってください">データは<a href="/link/test_data.csv">これ</a>を使ってください</h5>
+
+<pre><code class="language-python">import numpy as np
+
+data=np.loadtxt(&quot;ファイル名.csv&quot;,delimiter=&quot;,&quot;)
+</code></pre>
+
+<h2 id="データのグラフ表示">データのグラフ表示</h2>
+
+<p><code>matplotlib</code>というライブラリに入っている<br>
+<code>pyplot</code>というモジュールの中に入っている<br>
+<code>plot</code>と<code>show</code>という関数を使います。</p>
+
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+data=np.loadtxt(&quot;ファイルのパス&quot;,delimiter=&quot;,&quot;)
+
+plt.plot(data)
+plt.show()
+</code></pre>
+
+<h4 id="グラフの画像表示例">グラフの画像表示例</h4>
+
+<p><img src="/img/ecg.png" alt="ecg_img" /></p>
+
+<h2 id="データの保存">データの保存</h2>
+
+<p><code>numpy</code>に入っている<code>savetxt</code>という関数を使います。</p>
+
+<pre><code class="language-python">import numpy as np
+data=np.loadtxt(&quot;ファイル名.csv&quot;,delimiter=&quot;,&quot;)
+np.savetxt(&quot;セーブしたいファイル名.csv&quot;,data,delimiter=&quot;,&quot;)
+</code></pre>
+
+<h2 id="高速フーリエ変換-fft">高速フーリエ変換(FFT)</h2>
+
+<pre><code class="language-python">fft_data=np.abs(np.fft.fft(data))
+#二乗かも
+#ナイキスト周波数の話もあるので詳しくは勉強してね
+</code></pre>
+
+<h4 id="fftした後のグラフ画像">FFTした後のグラフ画像</h4>
+
+<p><img src="/img/fft.png" alt="fft_ecg" /></p>
+
+<h2 id="pythonの基本文法">pythonの基本文法</h2>
+
+<h3 id="条件分岐-if-else文">条件分岐(if,else文)</h3>
+
+<pre><code class="language-python">a=0
+if a==0:
+    print(0)
+else:
+    print(1)
+</code></pre>
+
+<h3 id="for文">for文</h3>
+
+<pre><code class="language-python">for i in range(5):
+    print(i)
+
+for i in [0,1,2,3,4]:
+    print(i)
+
+words=[&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;,123]
+
+for i in words:
+    print(i)
+</code></pre>
+
+<h3 id="pythonで主に扱う型">pythonで主に扱う型</h3>
+
+<table>
+<thead>
+<tr>
+<th align="center">型名</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">　int　</td>
+<td align="center">　整数型　</td>
+</tr>
+
+<tr>
+<td align="center">　float　</td>
+<td align="center">　浮動小数型　</td>
+</tr>
+
+<tr>
+<td align="center">　str　</td>
+<td align="center">　文字列　</td>
+</tr>
+
+<tr>
+<td align="center">　bool　</td>
+<td align="center">　真理型(True,1,真/False,0,偽)　</td>
+</tr>
+</tbody>
+</table>
+
+<p>確認する方法<br>
+<strong>type関数</strong>を使う！</p>
+
+<pre><code class="language-python">#例
+
+num=123  #整数型
+print(type(num))
+</code></pre>
+
+<h2 id="今後の環境構築の話">今後の環境構築の話</h2>
+
+<ul>
+<li>そのままcolabを使い続ける</li>
+<li>自分の(研究室の)PCに<a href="https://www.anaconda.com/distribution/">Anaconda</a>をインストールする</li>
+<li>pyenvなどを利用してインストールする</li>
+</ul>
+
+<p>e.c.t&hellip;</p>
+
+<h2 id="今後pythonを使うにあたって参考になるサイト">今後pythonを使うにあたって参考になるサイト</h2>
+
+<h3 id="python情報">python情報</h3>
+
+<ul>
+<li><a href="https://hacknote.jp/archives/52969/">pythonの環境構築方法(Anacondaを使う)</a></li>
+<li><a href="https://hacknote.jp/archives/53760/">pythonの環境構築方法(Anacondaを使わない)</a></li>
+<li><a href="https://tutorials.chainer.org/ja/tutorial.html">Chainer Tutorial</a></li>
+<li><a href="https://qiita.com/AI_Academy/items/b97b2178b4d10abe0adb">初心者向け 無料でPythonの基本文法を5時間で学ぼう！</a></li>
+<li><a href="https://note.nkmk.me/">note.nkmk.me</a></li>
+<li><a href="https://qiita.com/MENDY/items/fe9b0c50383d8b2fd919">Matplotlibで綺麗な論文用のグラフを作る</a></li>
+</ul>
+
+<h3 id="機械学習">機械学習</h3>
+
+<ul>
+<li><a href="https://ocw.tsukuba.ac.jp/course/systeminformation/machine_learning/">機械学習 | 筑波大学オープンコースウェア｜TSUKUBA OCW</a></li>
+<li><a href="https://tutorials.chainer.org/ja/tutorial.html">Chainer Tutorial</a></li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/python_seminar/posts/" title="Posts"> <i class="fa fa-chevron-left"></i><label>Posts</label></a>
+    </div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 29/11/2019
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    Create a content/_footer.md file to customize the footer content
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/python_seminar/js/clipboard.min.js"></script>
+
+<link href="/python_seminar/css/featherlight.min.css" rel="stylesheet">
+<script src="/python_seminar/js/featherlight.min.js"></script>
+
+
+
+<script src="/python_seminar/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

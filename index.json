@@ -1,0 +1,36 @@
+[
+{
+	"uri": "https://ryo1107.github.io/python_seminar/",
+	"title": "B3 Python Seminar",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://ryo1107.github.io/python_seminar/posts/",
+	"title": "Posts",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://ryo1107.github.io/python_seminar/posts/python/",
+	"title": "Python入門(Colab)",
+	"tags": [],
+	"description": "",
+	"content": " google colabの初期設定 Googleアカウントを持っている場合はGoogleDriveと連携しているGoogleColaboratoryを使うことで簡単に環境構築ができます。\n GoogleDriveにアクセスします。 環境を作りたいフォルダで右クリックをし、アプリを追加をクリックします。  (すでに追加済みのアカウントのためアプリの一覧に存在していますが、初期状態ではありません)\n colabと検索し、追加します。   GoogleDriveのフォルダに戻ってきて、右クリックのメニューからGoogle Colaboratoryをクリックします。  以上でGoogleの提供しているpythonの実行環境が表示されます。\njupyterという形式になっており、GoogleDriveの容量の限り使えます。\nColabへのデータのアップロードの方法 コピー\u0026amp;ペーストでGoogle Driveのフォルダ内にドラッグ\u0026amp;ドロップします。\nColab内でGoogleDriveをマウントします。\nファイルをクリックして、接続後\nドライブをマウントをクリック\n再生ボタンをクリック後出てくるURLをクリックし、Googleの認証をします。 そして、出てくるコードをColabの空欄に入力します。\nするとこのようにGoogleDriveをColabから利用できるようになります。\nファイルを使用する際はこのように、ファイルを右クリック後、パスをコピーします。\n最終目標 データの読み込みをして\n解析をして\n結果を保存する\nprint文 print(\u0026quot;Hello World\u0026quot;) #文字列の標準出力 print(123) #数値の標準出力 print(\u0026quot;Hello\u0026quot;+\u0026quot; \u0026quot;+\u0026quot;World\u0026quot;) #文字列の結合後に標準出力 num=123 print(str(num)+\u0026quot;test\u0026quot;) #数値を文字列に変換後、文字列の結合をし標準出力 text=\u0026quot;Hello2\u0026quot; print(text) #変数内の文字列の標準出力 print([1,2,3,4,5]) #リストの標準出力  データの読み込み numpyというライブラリに入っているloadtxtという関数を使用してnumpy配列の形式でデータを読み込みます。\nデータはこれを使ってください import numpy as np data=np.loadtxt(\u0026quot;ファイル名.csv\u0026quot;,delimiter=\u0026quot;,\u0026quot;)  データのグラフ表示 matplotlibというライブラリに入っている\npyplotというモジュールの中に入っている\nplotとshowという関数を使います。\nimport numpy as np import matplotlib.pyplot as plt data=np.loadtxt(\u0026quot;ファイルのパス\u0026quot;,delimiter=\u0026quot;,\u0026quot;) plt.plot(data) plt.show()  グラフの画像表示例 データの保存 numpyに入っているsavetxtという関数を使います。\nimport numpy as np data=np.loadtxt(\u0026quot;ファイル名.csv\u0026quot;,delimiter=\u0026quot;,\u0026quot;) np.savetxt(\u0026quot;セーブしたいファイル名.csv\u0026quot;,data,delimiter=\u0026quot;,\u0026quot;)  高速フーリエ変換(FFT) fft_data=np.abs(np.fft.fft(data)) #二乗かも #ナイキスト周波数の話もあるので詳しくは勉強してね  FFTした後のグラフ画像 pythonの基本文法 条件分岐(if,else文) a=0 if a==0: print(0) else: print(1)  for文 for i in range(5): print(i) for i in [0,1,2,3,4]: print(i) words=[\u0026quot;aaa\u0026quot;,\u0026quot;bbb\u0026quot;,\u0026quot;ccc\u0026quot;,123] for i in words: print(i)  pythonで主に扱う型    型名 説明     int　 整数型　   float　 浮動小数型　   str　 文字列　   bool　 真理型(True,1,真/False,0,偽)　    確認する方法\ntype関数を使う！\n#例 num=123 #整数型 print(type(num))  今後の環境構築の話  そのままcolabを使い続ける 自分の(研究室の)PCにAnacondaをインストールする pyenvなどを利用してインストールする  e.c.t\u0026hellip;\n今後pythonを使うにあたって参考になるサイト python情報  pythonの環境構築方法(Anacondaを使う) pythonの環境構築方法(Anacondaを使わない) Chainer Tutorial 初心者向け 無料でPythonの基本文法を5時間で学ぼう！ note.nkmk.me Matplotlibで綺麗な論文用のグラフを作る  機械学習  機械学習 | 筑波大学オープンコースウェア｜TSUKUBA OCW Chainer Tutorial  "
+},
+{
+	"uri": "https://ryo1107.github.io/python_seminar/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://ryo1107.github.io/python_seminar/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
